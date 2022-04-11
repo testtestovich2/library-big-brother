@@ -10,3 +10,21 @@
       url("../fonts/#{ $name }-#{ $weight }.woff") format("woff");
    }
 }
+
+@mixin tablet{
+  @media(min-width: 768px){
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media(min-width:1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media(min-width: 1280px) {
+    @content;
+  }
+}

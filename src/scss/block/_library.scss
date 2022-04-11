@@ -1,6 +1,24 @@
 .library{
   &__header{
+    position: relative;
     margin-bottom: 15px;
+
+    &:before{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 174px;
+      height: 174px;
+      background: #ff0000;
+      filter: blur(200px);
+      z-index: 1;
+      left: -66px;
+      top: -63px;
+
+      @include tablet{
+        content: none;
+      }
+    }
   }
 
   &__titles{
@@ -31,6 +49,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 15px 26px;
+    max-width: 780px;
   }
 
   &__add-btn{
@@ -39,5 +58,11 @@
     color: $primary;
     width: 44px;
     height: 44px;
+  }
+
+  &__footer{
+    @include tablet {
+      display: none;
+    }
   }
 }
